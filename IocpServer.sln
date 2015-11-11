@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IocpServer", "IocpServer\IocpServer.vcproj", "{86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestServer", "TestServer\TestServer.vcproj", "{EAF4100F-BFD1-4481-A2D3-B6A7D87D6F29}"
+	ProjectSection(ProjectDependencies) = postProject
+		{86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71} = {86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Unicode Debug|Win32 = Unicode Debug|Win32
+		Unicode Release|Win32 = Unicode Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71}.Debug|Win32.ActiveCfg = Debug|Win32
+		{86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71}.Debug|Win32.Build.0 = Debug|Win32
+		{86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71}.Release|Win32.ActiveCfg = Release|Win32
+		{86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71}.Release|Win32.Build.0 = Release|Win32
+		{86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
+		{86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
+		{86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71}.Unicode Release|Win32.ActiveCfg = Unicode Release|Win32
+		{86EFDC16-2BDF-46D1-ADD9-9EACB07D3A71}.Unicode Release|Win32.Build.0 = Unicode Release|Win32
+		{EAF4100F-BFD1-4481-A2D3-B6A7D87D6F29}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EAF4100F-BFD1-4481-A2D3-B6A7D87D6F29}.Debug|Win32.Build.0 = Debug|Win32
+		{EAF4100F-BFD1-4481-A2D3-B6A7D87D6F29}.Release|Win32.ActiveCfg = Release|Win32
+		{EAF4100F-BFD1-4481-A2D3-B6A7D87D6F29}.Release|Win32.Build.0 = Release|Win32
+		{EAF4100F-BFD1-4481-A2D3-B6A7D87D6F29}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
+		{EAF4100F-BFD1-4481-A2D3-B6A7D87D6F29}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
+		{EAF4100F-BFD1-4481-A2D3-B6A7D87D6F29}.Unicode Release|Win32.ActiveCfg = Unicode Release|Win32
+		{EAF4100F-BFD1-4481-A2D3-B6A7D87D6F29}.Unicode Release|Win32.Build.0 = Unicode Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
