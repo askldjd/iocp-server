@@ -194,40 +194,47 @@ void CWorkerThread::HandleAccept( CIocpContext &acceptContext, DWORD bytesTransf
 			// to notify the client to remove any connections.
 			m_iocpData.m_iocpHandler->OnServerError(WSAGetLastError());
 		}
-		return;
 	}
-
-	ConnectionInformation cinfo = 
-		GetConnectionInformation(acceptContext.m_socket);
-
-	shared_ptr<CConnection> c(new CConnection(
-		acceptContext.m_socket, 
-		m_iocpData.GetNextId(),
-		m_iocpData.m_rcvBufferSize
-		));
-
-	m_iocpData.m_connectionManager.AddConnection(c);
-
-	AssociateDevice((HANDLE)c->m_socket, m_iocpData);
-
-	if(m_iocpData.m_iocpHandler != NULL)
+	// If the socket is up, allocate the connection and notify the client.
+	else
 	{
-		m_iocpData.m_iocpHandler->OnNewConnection(c->m_id, cinfo);
-	}
+		ConnectionInformation cinfo = 
+			GetConnectionInformation(acceptContext.m_socket);
 
-	int lasterror = PostRecv(c->m_rcvContext);
+		shared_ptr<CConnection> c(new CConnection(
+			acceptContext.m_socket, 
+			m_iocpData.GetNextId(),
+			m_iocpData.m_rcvBufferSize
+			));
 
-	// Failed to post a queue a receive context. It is likely that the
-	// connection is already terminated at this point (by user or client).
-	// In such case, just remove the connection.
-	if( WSA_IO_PENDING != lasterror)
-	{
-		if(true == c->CloseRcvContext())
+		m_iocpData.m_connectionManager.AddConnection(c);
+
+		AssociateDevice((HANDLE)c->m_socket, m_iocpData);
+
+		if(m_iocpData.m_iocpHandler != NULL)
 		{
-			PostDisconnect(m_iocpData, *c);
+			m_iocpData.m_iocpHandler->OnNewConnection(c->m_id, cinfo);
+		}
+
+		int lasterror = PostRecv(c->m_rcvContext);
+
+		// Failed to post a queue a receive context. It is likely that the
+		// connection is already terminated at this point (by user or client).
+		// In such case, just remove the connection.
+		if( WSA_IO_PENDING != lasterror)
+		{
+			if(true == c->CloseRcvContext())
+			{
+				PostDisconnect(m_iocpData, *c);
+			}
 		}
 	}
 
+	// Post another Accept context to IOCP for another new connection.
+	//! @remark
+	//! For higher performance, it is possible to preallocate these sockets
+	//! and have a pool of accept context waiting. That adds complexity, and
+	//! unnecessary for now.
 	acceptContext.m_socket = CreateOverlappedSocket();
 
 	if(INVALID_SOCKET != acceptContext.m_socket)

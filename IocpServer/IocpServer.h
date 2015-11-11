@@ -9,6 +9,22 @@
 #include "Export.h"
 #include "IocpHandler.h"
 
+//////////////////////////////////////////////////////////////////////////
+//
+// History
+// Oct. 26 2010
+// Version 1.0
+// Creation
+//
+// Dec. 10 2010 
+// Version 1.1 
+// Fixed a bug where the IOCP server stops accepting connection when
+// setsockopt() fails.
+//
+// Removed an unnecessary event per Len Holgate's suggestion.
+//
+//////////////////////////////////////////////////////////////////////////
+
 namespace iocp {
 
 class IOCPSERVER_API CIocpServer

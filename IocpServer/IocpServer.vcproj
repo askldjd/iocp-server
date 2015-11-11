@@ -59,7 +59,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)-1.0-vc90d.dll"
+				OutputFile="$(OutDir)\$(ProjectName)-1.1-vc90d.dll"
 				GenerateDebugInformation="true"
 				EnableCOMDATFolding="0"
 				TargetMachine="1"
@@ -85,6 +85,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				CommandLine="@echo Copying *.h to C:\code_lib\custom\IocpServer&#x0D;&#x0A;@xcopy /D /Y /R *.h C:\code_lib\custom\IocpServer&#x0D;&#x0A;&#x0D;&#x0A;@echo Copying &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.lib to C:\code_lib\lib&#x0D;&#x0A;@xcopy /D /Y /R &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.lib C:\code_lib\lib&#x0D;&#x0A;&#x0D;&#x0A;@echo Copying &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.dll to C:\code_lib\lib&#x0D;&#x0A;@xcopy /D /Y /R &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.dll C:\code_lib\lib&#x0D;&#x0A;"
+				ExcludedFromBuild="true"
 			/>
 		</Configuration>
 		<Configuration
@@ -132,7 +133,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)-1.0-vc90.dll"
+				OutputFile="$(OutDir)\$(ProjectName)-1.1-vc90.dll"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
@@ -159,6 +160,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				CommandLine="@echo Copying *.h to C:\code_lib\custom\IocpServer&#x0D;&#x0A;@xcopy /D /Y /R *.h C:\code_lib\custom\IocpServer&#x0D;&#x0A;&#x0D;&#x0A;@echo Copying &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.lib to C:\code_lib\lib&#x0D;&#x0A;@xcopy /D /Y /R &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.lib C:\code_lib\lib&#x0D;&#x0A;&#x0D;&#x0A;@echo Copying &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.dll to C:\code_lib\lib&#x0D;&#x0A;@xcopy /D /Y /R &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.dll C:\code_lib\lib&#x0D;&#x0A;"
+				ExcludedFromBuild="true"
 			/>
 		</Configuration>
 		<Configuration
@@ -205,7 +207,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)-1.0-vc90Ud.dll"
+				OutputFile="$(OutDir)\$(ProjectName)-1.1-vc90Ud.dll"
 				GenerateDebugInformation="true"
 				EnableCOMDATFolding="0"
 				TargetMachine="1"
@@ -231,6 +233,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				CommandLine="@echo Copying *.h to C:\code_lib\custom\IocpServer&#x0D;&#x0A;@xcopy /D /Y /R *.h C:\code_lib\custom\IocpServer&#x0D;&#x0A;&#x0D;&#x0A;@echo Copying &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.lib to C:\code_lib\lib&#x0D;&#x0A;@xcopy /D /Y /R &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.lib C:\code_lib\lib&#x0D;&#x0A;&#x0D;&#x0A;@echo Copying &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.dll to C:\code_lib\lib&#x0D;&#x0A;@xcopy /D /Y /R &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.dll C:\code_lib\lib&#x0D;&#x0A;"
+				ExcludedFromBuild="true"
 			/>
 		</Configuration>
 		<Configuration
@@ -278,7 +281,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)-1.0-vc90U.dll"
+				OutputFile="$(OutDir)\$(ProjectName)-1.1-vc90U.dll"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
@@ -305,6 +308,7 @@
 			<Tool
 				Name="VCPostBuildEventTool"
 				CommandLine="@echo Copying *.h to C:\code_lib\custom\IocpServer&#x0D;&#x0A;@xcopy /D /Y /R *.h C:\code_lib\custom\IocpServer&#x0D;&#x0A;&#x0D;&#x0A;@echo Copying &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.lib to C:\code_lib\lib&#x0D;&#x0A;@xcopy /D /Y /R &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.lib C:\code_lib\lib&#x0D;&#x0A;&#x0D;&#x0A;@echo Copying &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.dll to C:\code_lib\lib&#x0D;&#x0A;@xcopy /D /Y /R &quot;$(OutDir)&quot;\&quot;$(TargetName)&quot;.dll C:\code_lib\lib&#x0D;&#x0A;"
+				ExcludedFromBuild="true"
 			/>
 		</Configuration>
 	</Configurations>

@@ -26,14 +26,10 @@ CIocpContext::CIocpContext(SOCKET socket,
 	// Clear out the overlapped struct. Apparently, you must be do this, 
 	// otherwise the overlap object will be rejected.
 	memset(this, 0, sizeof(OVERLAPPED));
-
-	// Create the event for waiting on IOCP. 
-	hEvent = CreateEvent(NULL, TRUE, TRUE, NULL);
 }
 
 CIocpContext::~CIocpContext()
 {
-	CloseHandle(hEvent);
 }
 
 void CIocpContext::ResetWsaBuf()
