@@ -59,7 +59,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)-1.1-vc90d.dll"
+				OutputFile="$(OutDir)\$(ProjectName)-1.2-vc90d.dll"
 				GenerateDebugInformation="true"
 				EnableCOMDATFolding="0"
 				TargetMachine="1"
@@ -133,7 +133,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)-1.1-vc90.dll"
+				OutputFile="$(OutDir)\$(ProjectName)-1.2-vc90.dll"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
@@ -207,7 +207,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)-1.1-vc90Ud.dll"
+				OutputFile="$(OutDir)\$(ProjectName)-1.2-vc90Ud.dll"
 				GenerateDebugInformation="true"
 				EnableCOMDATFolding="0"
 				TargetMachine="1"
@@ -281,7 +281,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(OutDir)\$(ProjectName)-1.1-vc90U.dll"
+				OutputFile="$(OutDir)\$(ProjectName)-1.2-vc90U.dll"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"

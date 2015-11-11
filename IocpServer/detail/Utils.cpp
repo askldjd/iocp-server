@@ -55,10 +55,22 @@ namespace iocp { namespace detail {
 		}
 
 #ifdef UNICODE
-		int iAnsiLen = lstrlenA(inet_ntoa(name.sin_addr));
-		LPWSTR unicodeIp = (LPWSTR)malloc(iAnsiLen * sizeof(TCHAR));
-		::MultiByteToWideChar(CP_ACP, 0, inet_ntoa(name.sin_addr), iAnsiLen, unicodeIp, iAnsiLen);
-		ci.m_remoteIpAddress = unicodeIp;
+		// Unicode version of converting address to a unicode string
+		int ansiLen = lstrlenA(inet_ntoa(name.sin_addr));
+		LPWSTR unicodeIp = (LPWSTR)malloc((ansiLen) * sizeof(TCHAR));
+		if(::MultiByteToWideChar(
+			CP_ACP, 
+			0, 
+			inet_ntoa(name.sin_addr), 
+			ansiLen, 
+			unicodeIp, 
+			ansiLen) != 0)
+		{
+			// The converted unicode IP address string is not NULL
+			// terminated. So we need to append the exact count.
+			ci.m_remoteIpAddress.append(unicodeIp, ansiLen);
+		}
+		
 		free(unicodeIp);
 
 #else

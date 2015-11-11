@@ -57,7 +57,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="../Debug/IocpServer-1.1-vc90d.lib"
+				AdditionalDependencies="../Debug/IocpServer-1.2-vc90d.lib"
 				GenerateDebugInformation="true"
 				TargetMachine="1"
 			/>
@@ -126,7 +126,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="../Release/IocpServer-1.1-vc90.lib"
+				AdditionalDependencies="../Release/IocpServer-1.2-vc90.lib"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
@@ -196,7 +196,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="../&quot;Unicode Debug&quot;/IocpServer-1.1-vc90Ud.lib"
+				AdditionalDependencies="../&quot;Unicode Debug&quot;/IocpServer-1.2-vc90Ud.lib"
 				OutputFile="$(OutDir)\$(ProjectName)-vc90Ud.exe"
 				GenerateDebugInformation="true"
 				TargetMachine="1"
@@ -266,7 +266,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="../&quot;Unicode Release&quot;/IocpServer-1.1-vc90U.lib"
+				AdditionalDependencies="../&quot;Unicode Release&quot;/IocpServer-1.2-vc90U.lib"
 				OutputFile="$(OutDir)\$(ProjectName)-vc90U.exe"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"

@@ -31,7 +31,7 @@ public:
 	}
 
 
-	LONGLONG CSharedIocpData::GetNextId()
+	LONGLONG GetNextId()
 	{
 		{
 			mutex::scoped_lock l(m_cidMutex);
